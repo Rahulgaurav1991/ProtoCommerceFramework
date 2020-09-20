@@ -3,7 +3,9 @@ from traceback import print_stack
 
 from selenium.webdriver.common.by import By
 
+import utility
 from Pages.BasePage import BasePage
+from utility.Logger import Logger
 
 
 class ShopPage(BasePage):
@@ -22,6 +24,7 @@ class ShopPage(BasePage):
     BLACKBERRY_BUTTON = (By.XPATH, " //a[.='Blackberry']/../../..//button")
     ITEMS_AT_CHECKOUT_PAGE = (By.XPATH, "//table//td//h4//a")
 
+
     def click_on_shop_link(self):
         return self.driver.find_element(*ShopPage.SHOP_LINK)
 
@@ -37,6 +40,7 @@ class ShopPage(BasePage):
             if len(element) > 0:
                 for items in element:
                     list.append(items.text)
+            # self.log.info("the items in list are ---->" + str(list))
             print("the items in list are ---->" + str(list))
             return list
         except:
@@ -85,3 +89,6 @@ class ShopPage(BasePage):
         for items in all_items:
             print("the items at checkoutpage is:---->" + items.text)
             return items.text
+
+
+

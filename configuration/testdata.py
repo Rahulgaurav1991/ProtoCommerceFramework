@@ -9,4 +9,6 @@ class TestData:
     _MESSAGE = "Success!"
     _LIST_ITEMS = ['iphone X', 'Samsung Note 8', 'Nokia Edge', 'Blackberry']
     _ITEM = 'iphone X'
-
+    _COUNTRY = "ind"
+    _COUNTRY_SELECT = "India"
+    _SUCCESS_MESSAGE = "Success! Thank you! Your order will be delivered in next few weeks :-)."

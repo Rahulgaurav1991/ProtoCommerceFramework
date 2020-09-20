@@ -1,5 +1,6 @@
 import time
 
+from Pages.CheckoutPage import CheckoutPage
 from Pages.ShopPage import ShopPage
 from Tests.test_Base import BaseTest
 from configuration.testdata import TestData
@@ -24,5 +25,8 @@ class Test_Shop(BaseTest):
         sp.click_on_shop_link().click()
         item_from_shop_page = sp.add_items_cart(TestData._ITEM)  # adding items as per requirments
         sp.click_checkout_button().click()
-        item_from_checkout_page = sp.verify_items_checkout_page() # getting items from Checkout page
+        item_from_checkout_page = sp.verify_items_checkout_page()  # getting items from Checkout page
         assert item_from_shop_page == item_from_checkout_page
+
+
+
